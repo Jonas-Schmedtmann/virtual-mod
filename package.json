@@ -1,0 +1,23 @@
+{
+  "name": "virtual-mod",
+  "version": "1.0.0",
+  "description": "No more salty things will happen 😎!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Manas Khandelwal",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "discord.js-commando": "^0.12.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
