@@ -11,6 +11,7 @@ module.exports = [
   "tradeoffer/new/?partner=",
   "new/?partner=",
   "tradeoffer/new",
+  "tradeoffer",
   "leaving cs:go",
   "giving away my skins to people",
   "skins to people",

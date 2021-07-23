@@ -1,3 +1,4 @@
+const path = require("path");
 const Commando = require("discord.js-commando");
 const dotenv = require("dotenv");
 
@@ -20,6 +21,10 @@ client.on("ready", async () => {
   console.log("===============================================");
   console.log(`Logged in as ${client.user.tag}!`);
 
+  client.registry
+    .registerGroups([["settings", "Commands related to bot settings."]])
+    .registerCommandsIn(path.join(__dirname, "commands"));
+
   client.on("message", (message) => {
     if (message.author.bot) return;
 
@@ -35,6 +40,8 @@ client.on("ready", async () => {
   client.user.setActivity("you", {
     type: "WATCHING",
   });
+
+  client.user.setStatus("dnd");
 });
 
 client.login(process.env.BOT_TOKEN);
