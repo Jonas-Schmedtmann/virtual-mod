@@ -31,6 +31,10 @@ client.on("ready", async () => {
     keywordChecker(message);
     massMentionChecker(message);
   });
+
+  client.user.setActivity("you", {
+    type: "WATCHING",
+  });
 });
 
 client.login(process.env.BOT_TOKEN);

@@ -7,6 +7,7 @@ module.exports = [
   "steamcommunytu",
   "steamcomunitty",
   "steancommunytiu",
+  "steancommunyti",
   "tradeoffer/new/?partner=",
   "new/?partner=",
   "tradeoffer/new",
