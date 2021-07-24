@@ -11,7 +11,6 @@ module.exports = async function (message) {
   const fileExtentionsUsed = [];
 
   const isfileExtentionUsed = attachmentExtentions.every((extention) => {
-    console.log(extention);
     const isExtentionIncluded = validExtentions.includes(extention);
     if (!isExtentionIncluded) fileExtentionsUsed.push(extention);
     return isExtentionIncluded;

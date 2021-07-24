@@ -66,8 +66,7 @@ module.exports = async function (message) {
         )
         .setColor("#43b581");
       await message.author.send(DMUnMuteEmbed);
-      // }, 600000); // 10 Mins
-    }, 10000);
+    }, 600000); // 10 Mins
 
     // Delete Message
     await message.delete();
