@@ -2,6 +2,7 @@ const path = require("path");
 const Commando = require("discord.js-commando");
 const dotenv = require("dotenv");
 
+const config = require("./config");
 const keywordChecker = require("./utils/keywordChecker");
 const badWordsChecker = require("./utils/badWordsChecker");
 const massMentionChecker = require("./utils/massMentionChecker");
@@ -14,7 +15,7 @@ dotenv.config({
 
 const client = new Commando.Client({
   owner: "667667162579861505",
-  commandPrefix: "&",
+  commandPrefix: "!",
 });
 
 client.on("ready", async () => {
@@ -26,7 +27,7 @@ client.on("ready", async () => {
     .registerCommandsIn(path.join(__dirname, "commands"));
 
   client.on("message", (message) => {
-    if (message.author.bot) return;
+    if (message.author.bot || !config.ACTIVE || message.isCommand) return;
 
     badWordsChecker(message);
     filesChecker(message);
@@ -40,8 +41,6 @@ client.on("ready", async () => {
   client.user.setActivity("you", {
     type: "WATCHING",
   });
-
-  client.user.setStatus("dnd");
 });
 
 client.login(process.env.BOT_TOKEN);

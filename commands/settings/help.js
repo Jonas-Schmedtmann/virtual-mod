@@ -9,8 +9,11 @@ module.exports = class AddCommand extends Commando.Command {
       group: "settings",
       memberName: "help",
       description: "Displays this message",
+      userPermissions: ["MANAGE_MESSAGES"],
       argsType: "multiple",
       format: "help",
+      guildOnly: true,
+      throttling: { usages: 1, duration: 600 },
     });
   }
 

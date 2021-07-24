@@ -6,11 +6,12 @@ module.exports = class AddCommand extends Commando.Command {
       name: "prefix",
       group: "settings",
       memberName: "prefix",
-      description: "Display/Change the bot command perfix",
+      description: "Display the bot's command perfix",
       argsType: "multiple",
       userPermissions: ["MANAGE_ROLES"],
       format: "prefix",
       guildOnly: true,
+      throttling: { usages: 2, duration: 600 },
     });
   }
 

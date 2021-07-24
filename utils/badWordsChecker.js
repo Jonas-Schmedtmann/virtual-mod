@@ -1,11 +1,25 @@
+const fs = require("fs");
+const path = require("path");
 const Discord = require("discord.js");
+const config = require("./../config");
 const keywords = require("./../misc/badWordsList");
 
+const wordListFile = path.join(__dirname, "./../misc/badWordsCustom.json");
+
+let wordsList = JSON.parse(fs.readFileSync(wordListFile, "utf8")).words;
+
 module.exports = async function (message) {
+  if (config.RE_READ) {
+    wordsList = JSON.parse(fs.readFileSync(wordListFile, "utf8")).words;
+    config.RE_READ = false;
+  }
+
   let keywordsUsed = null;
 
   const isKeywordUsed = keywords.some((word) => {
-    const isWordIncluded = message.content.toLowerCase().includes(word);
+    const isWordIncluded =
+      message.content.toLowerCase().split(" ").includes(word) &&
+      !wordsList.includes(word);
     if (isWordIncluded) keywordsUsed = word;
     return isWordIncluded;
   });
