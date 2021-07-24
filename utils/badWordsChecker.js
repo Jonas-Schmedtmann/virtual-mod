@@ -17,6 +17,14 @@ module.exports = async function (message) {
   let keywordsUsed = null;
 
   const isKeywordUsed = keywords.some((word) => {
+    if (word.split(" ").length > 1) {
+      const isWordIncluded =
+        message.content.toLowerCase().includes(word) &&
+        !wordsList.includes(word);
+      if (isWordIncluded) keywordsUsed = word;
+      return isWordIncluded;
+    }
+
     const isWordIncluded =
       message.content.toLowerCase().split(" ").includes(word) &&
       !wordsList.includes(word);

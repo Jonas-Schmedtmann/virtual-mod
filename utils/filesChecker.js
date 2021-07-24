@@ -17,7 +17,6 @@ module.exports = async function (message) {
   });
 
   if (!isfileExtentionUsed) {
-    // Mute the person
     const mutedRole = message.member.guild.roles.cache.find(
       (role) => role.id === process.env.MUTED_ROLE_ID
     );

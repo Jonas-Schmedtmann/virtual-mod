@@ -1,7 +1,5 @@
 module.exports = [
   "steancommunity",
-  "steamcommunity",
-  "steamcommunity",
   "stearncommunytiy",
   "steancommunnity",
   "steamcommunytu",
