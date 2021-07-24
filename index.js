@@ -15,7 +15,7 @@ dotenv.config({
 
 const client = new Commando.Client({
   owner: "667667162579861505",
-  commandPrefix: "!",
+  commandPrefix: "&",
 });
 
 client.on("ready", async () => {
