@@ -98,7 +98,7 @@ module.exports = class AddCommand extends Commando.Command {
       );
 
       const embed = new Discord.MessageEmbed()
-        .setAuthor(`${newArray.length} words removed`)
+        .setAuthor(`${words.length} words removed`)
         .setDescription(
           `Words removed: \n${words
             .map((word, i) => `${i + 1}) ${word}`)
