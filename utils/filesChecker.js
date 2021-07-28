@@ -5,7 +5,9 @@ module.exports = async function (message) {
   const attachmentExtentions = [];
 
   for (let attachment of message.attachments.values()) {
-    attachmentExtentions.push(attachment.url.split(".").slice(-1).pop());
+    attachmentExtentions.push(
+      attachment.url.split(".").slice(-1).pop().toLowerCase()
+    );
   }
 
   const fileExtentionsUsed = [];

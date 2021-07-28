@@ -7,6 +7,7 @@ module.exports = [
   "pptx",
   "mp3",
   "wav",
+  "wmv",
   "csv",
   "xml",
   "html",
