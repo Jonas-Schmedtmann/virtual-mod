@@ -17,6 +17,7 @@ module.exports = [
   "js",
   "jsx",
   "ts",
+  "json",
   "tsx",
   "php",
   "gif",

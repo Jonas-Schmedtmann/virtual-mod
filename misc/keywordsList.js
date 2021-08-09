@@ -23,4 +23,6 @@ module.exports = [
   "balashcourse",
   "axo2moon",
   "discord.gg",
+  "discorcl",
+  "steamcommunity",
 ];

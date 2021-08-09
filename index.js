@@ -23,7 +23,10 @@ client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
   client.registry
-    .registerGroups([["settings", "Commands related to bot settings."]])
+    .registerGroups([
+      ["settings", "Commands related to bot settings."],
+      ["fun", "Commands just for fun."],
+    ])
     .registerCommandsIn(path.join(__dirname, "commands"));
 
   client.on("message", (message) => {
