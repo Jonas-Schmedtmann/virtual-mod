@@ -25,4 +25,5 @@ module.exports = [
   "discord.gg",
   "discorcl",
   "steamcommunity",
+  "discord-nitro",
 ];
