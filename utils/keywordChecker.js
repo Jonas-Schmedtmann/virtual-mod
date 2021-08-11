@@ -37,21 +37,6 @@ module.exports = async function (message) {
       .get(process.env.LOGS_CHANNEL_ID)
       .send(`<@&${process.env.MOD_TEAM_ROLE_ID}>,`, LogEmbed);
 
-    // Send Message in DMs
-    const DMEmbed = new Discord.MessageEmbed()
-      .setAuthor(
-        `${message.client.user.tag} (ID: ${message.client.user.id})`,
-        message.client.user.avatarURL()
-      )
-      .setDescription(
-        `:file_cabinet: **Server:** ${message.guild.name}
-:mute: You have been muted :mute:.
-:page_facing_up: **Reason:** Message includes \`${keywordsUsed}\``
-      )
-      .setThumbnail(message.author.avatarURL())
-      .setColor(mutedRole.hexColor);
-    await message.author.send(DMEmbed);
-
     // Delete Message
     await message.delete();
   }
