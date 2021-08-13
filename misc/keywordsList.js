@@ -26,4 +26,5 @@ module.exports = [
   "discorcl",
   "steamcommunity",
   "discord-nitro",
+  "discord-faq",
 ];
