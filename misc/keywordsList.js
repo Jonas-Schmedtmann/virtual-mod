@@ -27,4 +27,6 @@ module.exports = [
   "steamcommunity",
   "discord-nitro",
   "discord-faq",
+  "discrodnitro",
+  "giftsdiscord",
 ];
