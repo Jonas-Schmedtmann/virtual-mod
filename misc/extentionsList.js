@@ -27,4 +27,5 @@ module.exports = [
   "svg",
   "mkv",
   "mp4",
+  "webm",
 ];
